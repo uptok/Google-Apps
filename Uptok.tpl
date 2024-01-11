@@ -31,44 +31,20 @@ ___TEMPLATE_PARAMETERS___
 [
   {
     "type": "TEXT",
-    "name": "storeUrl",
-    "displayName": "Store URL",
+    "name": "heading",
     "simpleValueType": true,
     "valueValidators": [
       {
         "type": "NON_EMPTY"
-      },
-      {
-        "type": "REGEX",
-        "args": [
-          "(https:\\/\\/www\\.|http:\\/\\/www\\.|https:\\/\\/|http:\\/\\/)?[a-zA-Z0-9]{2,}(\\.[a-zA-Z0-9]{2,})(\\.[a-zA-Z0-9]{2,})?"
-        ]
       }
     ],
-    "valueHint": "https://example.com"
-  },
-  {
-    "type": "TEXT",
-    "name": "heading",
-    "displayName": "Call to action",
-    "simpleValueType": true,
-    "alwaysInSummary": false,
-    "help": "Enter a message inviting customers to request a video call for this tag",
-    "valueHint": "Call to action for video trigger",
-    "valueValidators": [
-      {
-        "type": "NON_EMPTY"
-      }
-    ]
+    "displayName": "heading"
   },
   {
     "type": "TEXT",
     "name": "subHeading",
-    "displayName": "Sub head",
+    "displayName": "subHeading",
     "simpleValueType": true,
-    "alwaysInSummary": false,
-    "valueHint": "Sub-heading for video trigger",
-    "help": "Enter a secondary message to encourage customers to call",
     "valueValidators": [
       {
         "type": "NON_EMPTY"
@@ -80,30 +56,15 @@ ___TEMPLATE_PARAMETERS___
 
 ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
-const injectScript = require('injectScript');
 const callInWindow = require('callInWindow');
+const injectScript = require('injectScript');
 const log = require('logToConsole');
-const queryPermission = require('queryPermission');
- 
-const postScriptUrl = 'https://uptok-production.s3.us-east-2.amazonaws.com/widget/uptok-bundle.js'; 
-const endpoint = data.webhookUrl; //webhook URL
-
-log(data);
-
 const payload = {heading: data.heading, subHeading: data.subHeading};
-
-if (queryPermission('inject_script', postScriptUrl)) {
-  injectScript(postScriptUrl, onSuccess, data.gtmOnFailure, postScriptUrl);
-} else {
-  log('postScriptUrl: Script load failed due to permissions mismatch.');
-  data.gtmOnFailure();
-}
-
-
 function onSuccess() {
-  callInWindow('sendData', payload, endpoint);
+  callInWindow('sendData', payload);
   data.gtmOnSuccess();
 }
+onSuccess();
 
 
 ___WEB_PERMISSIONS___
@@ -133,20 +94,7 @@ ___WEB_PERMISSIONS___
         "publicId": "inject_script",
         "versionId": "1"
       },
-      "param": [
-        {
-          "key": "urls",
-          "value": {
-            "type": 2,
-            "listItem": [
-              {
-                "type": 1,
-                "string": "https://uptok-production.s3.us-east-2.amazonaws.com/widget/uptok-bundle.js"
-              }
-            ]
-          }
-        }
-      ]
+      "param": []
     },
     "clientAnnotations": {
       "isEditedByUser": true
@@ -224,6 +172,5 @@ scenarios: []
 
 ___NOTES___
 
-Created on 12/28/2023, 5:56:57 PM
-
+Created on 1/11/2024, 5:39:32 PM
 
