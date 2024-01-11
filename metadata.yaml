@@ -2,4 +2,4 @@ homepage: "https://www.uptok.com/"
 versions:
   # Latest version
   - sha: 1317e0e69c036f15d6fc726a6203842df2ec24df
-    changeNotes: Update template metadata.
+    changeNotes: Initial publish of the template.
