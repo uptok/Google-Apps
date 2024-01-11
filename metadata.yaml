@@ -1,5 +1,5 @@
 homepage: "https://www.uptok.com/"
 versions:
   # Latest version
-  - sha: df2030bfa096da528fd8cc96229485027b485a4c
+  - sha: 1317e0e69c036f15d6fc726a6203842df2ec24df
     changeNotes: Update template metadata.
