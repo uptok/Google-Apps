@@ -1,5 +1,5 @@
 homepage: "https://www.uptok.com/"
 versions:
   # Latest version
-  - sha: 7de92a3a27fbf0eee63fe008e4588f49c811ada0
+  - sha: fc5d1cab372c7d4f10ce74022a486eaaa2d80b8d
     changeNotes: Initial publish of the template.
