@@ -57,7 +57,6 @@ ___TEMPLATE_PARAMETERS___
 ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
 const callInWindow = require('callInWindow');
-const injectScript = require('injectScript');
 const log = require('logToConsole');
 const payload = {heading: data.heading, subHeading: data.subHeading};
 function onSuccess() {
@@ -85,19 +84,6 @@ ___WEB_PERMISSIONS___
           }
         }
       ]
-    },
-    "isRequired": true
-  },
-  {
-    "instance": {
-      "key": {
-        "publicId": "inject_script",
-        "versionId": "1"
-      },
-      "param": []
-    },
-    "clientAnnotations": {
-      "isEditedByUser": true
     },
     "isRequired": true
   },
@@ -172,5 +158,5 @@ scenarios: []
 
 ___NOTES___
 
-Created on 1/12/2024, 12:21:47 PM
+Created on 1/12/2024, 3:18:23 PM
 
