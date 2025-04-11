@@ -1,5 +1,9 @@
-homepage: "https://www.uptok.com/"
+homepage: "https://www.uptok.com"
+documentation: "https://www.uptok.com/how-it-works"
 versions:
+  # Latest version
+  - sha: 0f1da1b682e1011c9442b740d5c03621ac23641a
+    changeNotes: update changes in metadata.
   # Latest version
   - sha: fc5d1cab372c7d4f10ce74022a486eaaa2d80b8d
     changeNotes: Initial publish of the template.
