@@ -2,6 +2,8 @@ homepage: "https://www.uptok.com"
 documentation: "https://www.uptok.com/how-it-works"
 versions:
   # Latest version
+  - sha: 8aa2f93d877cf6bdafff5d5d18a97a422dce656e
+    changeNotes: update the template and license files.
   - sha: 0f1da1b682e1011c9442b740d5c03621ac23641a
     changeNotes: update changes in metadata.
   # Latest version
