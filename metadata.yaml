@@ -1,11 +1,11 @@
 homepage: "https://www.uptok.com"
 documentation: "https://www.uptok.com/how-it-works"
 versions:
-  # Latest version
+  - sha: 62840baef75cdd78610884d62a9bf0f1f4cf544d
+    changeNotes: add a readme.md file
   - sha: 8aa2f93d877cf6bdafff5d5d18a97a422dce656e
     changeNotes: update the template and license files.
   - sha: 0f1da1b682e1011c9442b740d5c03621ac23641a
     changeNotes: update changes in metadata.
-  # Latest version
   - sha: fc5d1cab372c7d4f10ce74022a486eaaa2d80b8d
     changeNotes: Initial publish of the template.
